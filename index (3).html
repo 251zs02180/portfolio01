@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web開発学習ダッシュボード</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">WEB APPLICATION DEVELOPMENT</p>
+      <h1>Web開発学習ダッシュボード</h1>
+      <p class="lead">
+        Linux、ネットワーク、Git/GitHub、Docker、Node.js、API、テスト、Bot開発まで、
+        授業で学んだ内容をまとめて確認できるWebアプリです。
+      </p>
+      <a class="back-link" href="../index.html">← ポートフォリオへ戻る</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">COURSE MAP</p>
+          <h2>授業で学んだ内容</h2>
+        </div>
+        <p class="section-note">全15回の主な内容を一覧で確認できます。</p>
+      </div>
+      <div id="lesson-grid" class="lesson-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">LINUX</p>
+          <h2>Linuxコマンド検索</h2>
+        </div>
+        <p class="section-note">授業で使ったコマンドを名前や用途から検索できます。</p>
+      </div>
+
+      <label class="search-label" for="command-search">コマンドを検索</label>
+      <input
+        id="command-search"
+        class="search-input"
+        type="search"
+        placeholder="例: ファイル、Git、Docker、grep"
+      >
+      <div id="command-list" class="command-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">CRUD / JAVASCRIPT</p>
+          <h2>学習TODO</h2>
+        </div>
+        <p class="section-note">add・done・del・list の考え方をブラウザ上で再現しています。</p>
+      </div>
+
+      <form id="todo-form" class="todo-form">
+        <input id="todo-input" type="text" maxlength="60" placeholder="例：Gitの復習をする">
+        <button type="submit">追加</button>
+      </form>
+
+      <div class="todo-toolbar">
+        <button class="filter-button active" data-filter="all">すべて</button>
+        <button class="filter-button" data-filter="active">未完了</button>
+        <button class="filter-button" data-filter="done">完了済み</button>
+      </div>
+
+      <div class="progress-wrap" aria-label="TODO進捗">
+        <div class="progress-bar">
+          <div id="progress-value" class="progress-value"></div>
+        </div>
+        <p id="progress-text">0 / 0 完了</p>
+      </div>
+
+      <ul id="todo-list" class="todo-list"></ul>
+      <p id="todo-empty" class="empty-message">TODOはありません。</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">API / JSON</p>
+          <h2>GitHubリポジトリ情報を取得</h2>
+        </div>
+        <p class="section-note">
+          GitHubの公開APIへアクセスし、JSONデータをJavaScriptで取得します。
+        </p>
+      </div>
+
+      <form id="github-form" class="github-form">
+        <input id="github-owner" type="text" placeholder="GitHubユーザー名" required>
+        <input id="github-repo" type="text" placeholder="リポジトリ名" required>
+        <button type="submit">取得する</button>
+      </form>
+
+      <div id="github-result" class="api-result" aria-live="polite">
+        <p>ユーザー名とリポジトリ名を入力すると、公開情報を取得できます。</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">CHECK</p>
+          <h2>理解度チェック</h2>
+        </div>
+        <p class="section-note">授業内容から5問出題します。</p>
+      </div>
+
+      <div id="quiz-box" class="quiz-box"></div>
+      <div class="quiz-actions">
+        <button id="quiz-check">答え合わせ</button>
+        <button id="quiz-reset" class="secondary">やり直す</button>
+      </div>
+      <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
+    </section>
+
+    <section class="panel concept-panel">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">DEVELOPMENT FLOW</p>
+          <h2>授業全体のつながり</h2>
+        </div>
+      </div>
+
+      <div class="flow">
+        <div><strong>Linux</strong><span>開発環境とCLI</span></div>
+        <span>→</span>
+        <div><strong>HTTP / API</strong><span>通信とデータ取得</span></div>
+        <span>→</span>
+        <div><strong>Git / GitHub</strong><span>履歴管理と共同開発</span></div>
+        <span>→</span>
+        <div><strong>Docker / Node.js</strong><span>実行環境とサーバー側JavaScript</span></div>
+        <span>→</span>
+        <div><strong>Test / Bot</strong><span>品質確認と機能連携</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Webアプリケーション開発で学んだ内容をもとに制作しました。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

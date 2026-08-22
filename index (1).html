@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオサイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ポートフォリオサイト</h1>
+    <p>Web制作で学んだことや作成した作品をまとめました。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>自己紹介</h2>
+      <p>大学でHTML、CSS、JavaScriptを使ったWeb制作を学んでいます。</p>
+    </section>
+
+    <section>
+      <h2>学んだスキル</h2>
+      <ul class="skill-list">
+        <li>HTML・CSS・JavaScriptによるWebページ制作</li>
+        <li>Linux・Vim・シェルスクリプトによる開発環境の操作</li>
+        <li>HTTP・DNS・API・JSONなどWeb通信の基礎</li>
+        <li>Git・GitHubによる履歴管理、ブランチ、Pull Request</li>
+        <li>Docker・Docker Composeによる開発環境の構築</li>
+        <li>Node.js、yarn、モジュール化、CRUD、自動テスト</li>
+        <li>Slack Boltを利用したBot開発</li>
+        <li>GitHub PagesによるWebページの公開</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>作品</h2>
+
+      <div class="work-card">
+        <h3>いいところ診断</h3>
+        <p>
+          名前を入力すると、その人のいいところを診断して表示するWebアプリです。
+          JavaScriptで入力内容を取得し、診断結果を画面に表示します。
+        </p>
+        <a href="assessment/index.html">作品を見る</a>
+      </div>
+
+
+      <div class="work-card featured-work">
+        <div class="work-label">総合課題</div>
+        <h3>Web開発学習ダッシュボード</h3>
+        <p>
+          Webアプリケーション開発の授業全体をもとに作成した学習支援ページです。
+          Linuxコマンド検索、CRUD型TODO、GitHub APIによるJSON取得、確認クイズを実装し、
+          Git/GitHub、Docker、Node.js、テスト、Bot開発までの学習内容も一覧で整理しました。
+        </p>
+        <a href="webdev-dashboard/index.html">作品を見る</a>
+      </div>
+
+      <div class="work-card">
+        <h3>ランダムな円のアニメーション</h3>
+        <p>
+          Open Processingで作成した、ランダムな位置・色・大きさの円を描画する作品です。
+        </p>
+
+        
+        <a href="https://openprocessing.org/@251zs02180/2962770">作品を見る</a>
+</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portfolio</p>
+  </footer>
+</body>
+</html>
